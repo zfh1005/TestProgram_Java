@@ -6,8 +6,17 @@ package testprogram.IOTest;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class LEDTest {
+    public LEDTest(){
+        //send command to dut socket
+        
+        //read dut buffer thread
+        
+        //show messagebox tell operation check led
+        
+        //if press OK button auto close messagebox
+    }
     
 }

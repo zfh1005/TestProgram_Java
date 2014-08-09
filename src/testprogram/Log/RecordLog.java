@@ -6,8 +6,14 @@ package testprogram.Log;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class RecordLog {
+    public RecordLog(){
+        //get server IP address from setting file
+        //make a connect to server
+        //make record forder
+        //write data to server file
+    }
     
 }

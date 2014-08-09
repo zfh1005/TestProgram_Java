@@ -6,7 +6,7 @@ package testprogram;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class FailedValueDefine {
     public int iPASS = -1;

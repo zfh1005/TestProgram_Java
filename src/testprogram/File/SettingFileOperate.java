@@ -13,7 +13,7 @@ import testprogram.FailedValueDefine;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class SettingFileOperate {
     FailedValueDefine FailedValueDefine = new FailedValueDefine();

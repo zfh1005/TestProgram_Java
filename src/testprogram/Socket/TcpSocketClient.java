@@ -1,6 +1,13 @@
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+ * 控制产品的类,产品作为TCP server socket，测试程序作为TCP client socket,端口号23
+ * 包括如下函数：
+ * public boolean DutSocketConnect(String IP, int DutPortNo);
+ * public boolean DutSocketClose();
+ * public boolean SendDutCommand(String szCmd, String szCheckKeyWord, int iTimeOutTime);
+ * public boolean ReadDutReturnInfo();
+ * public boolean SocketConnectStatue();
  */
 package testprogram.Socket;
 
@@ -20,14 +27,8 @@ import testprogram.TypeChange;
 
 
 /**
- *控制产品的类,产品作为TCP server socket，测试程序作为TCP client socket,端口号23
- * 包括如下函数：
- * public boolean DutSocketConnect(String IP, int DutPortNo);
- * public boolean DutSocketClose();
- * public boolean SendDutCommand(String szCmd, String szCheckKeyWord, int iTimeOutTime);
- * public boolean ReadDutReturnInfo();
- * public boolean SocketConnectStatue();
- * @author cq
+ 
+ * @author zfh1005
  */
 
 public class TcpSocketClient {

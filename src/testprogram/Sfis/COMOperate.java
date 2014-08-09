@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class COMOperate implements SerialPortEventListener {   
     static CommPortIdentifier CommPortID;//检测系统可用的通讯端口类
@@ -57,7 +57,7 @@ public class COMOperate implements SerialPortEventListener {
                         return true;
                     }
                     catch(PortInUseException e){
-                        System.out.println("Open COM port failed!");
+                        Logger.getLogger("Open COM port failed!");
                     }
                 }
             }        
@@ -83,8 +83,7 @@ public class COMOperate implements SerialPortEventListener {
     }
     
     public void COMOperateRead(){  
-        this.COMOperateReadThread();        
-        return ;
+        this.COMOperateReadThread();
     }
     
     public void COMOperateReadThread(){ 
@@ -132,12 +131,10 @@ public class COMOperate implements SerialPortEventListener {
         catch (IOException ex) {
             Logger.getLogger(COMOperate.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return ;
     }
     
     public void COMOperateClose(String COM_Name){ 
         this.CommSerialPort.close();
-        return ;
     }
     
 }

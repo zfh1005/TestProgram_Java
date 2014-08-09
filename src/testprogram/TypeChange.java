@@ -6,7 +6,7 @@ package testprogram;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class TypeChange {
     

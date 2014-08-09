@@ -6,8 +6,14 @@ package testprogram.IOTest;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class USBTest {
+    public USBTest(){
+        //send command to dut socket
+        //read dut buffer thread
+        //get USB insert key word from setting file
+        //compare key word
+    }
     
 }

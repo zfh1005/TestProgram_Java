@@ -9,5 +9,7 @@ package testprogram.WiFi;
  * @author cq
  */
 public class SettingGolden {
-    
+    public SettingGolden(){
+        //send setting command to golden socket
+    }
 }

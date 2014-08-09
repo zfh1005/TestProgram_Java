@@ -10,73 +10,50 @@ import java.util.HashMap;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class ReadSettingValue {
 
-    public String getDutBoardID() {
-        return DutBoardID;
-    }
-
-    public void setDutBoardID(String DutBoardID) {
-        this.DutBoardID = DutBoardID;
-    }
-
-    public String getDutBootcode() {
-        return DutBootcode;
-    }
-
-    public void setDutBootcode(String DutBootcode) {
-        this.DutBootcode = DutBootcode;
-    }
-
-    public String getDutRegionCode() {
-        return DutRegionCode;
-    }
-
-    public void setDutRegionCode(String DutRegionCode) {
-        this.DutRegionCode = DutRegionCode;
-    }
-
-    public String[] getDutStringTableCheckSum() {
-        return DutStringTableCheckSum;
-    }
-
-    public void setDutStringTableCheckSum(String[] DutStringTableCheckSum) {
-        this.DutStringTableCheckSum = DutStringTableCheckSum;
-    }
-
-    public String getDutVersion() {
-        return DutVersion;
-    }
-
-    public void setDutVersion(String DutVersion) {
-        this.DutVersion = DutVersion;
-    }
-
-    public String getDutVersionTime() {
-        return DutVersionTime;
-    }
-
-    public void setDutVersionTime(String DutVersionTime) {
-        this.DutVersionTime = DutVersionTime;
+    public String getStationName() {
+        //open file        
+        //read data        
+        //paser key word
+        return StationName;
     }
 
     public String getProductName() {
         return ProductName;
     }
 
-    public void setProductName(String ProductName) {
-        this.ProductName = ProductName;
+    public String getDutVersion() {
+        return DutVersion;
     }
 
-    public String getStationName() {
-        return StationName;
+    public String getDutBoardID() {
+        return DutBoardID;
     }
 
-    public void setStationName(String StationName) {
-        this.StationName = StationName;
+    public String getDutVersionTime() {
+        return DutVersionTime;
     }
+
+    public String getDutBootcode() {
+        return DutBootcode;
+    }
+
+    public String getDutRegionCode() {
+        return DutRegionCode;
+    }
+
+    public String[] getDutStringTableCheckSum() {
+        return DutStringTableCheckSum;
+    }
+
+    public HashMap<String, String> getSettingMap() {
+        return SettingMap;
+    }
+
+  
     //common data
     public String StationName;
     public String ProductName;
