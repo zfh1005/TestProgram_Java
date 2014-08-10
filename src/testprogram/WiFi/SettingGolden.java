@@ -6,7 +6,7 @@ package testprogram.WiFi;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class SettingGolden {
     public SettingGolden(){

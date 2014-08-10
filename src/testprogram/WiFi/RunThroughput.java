@@ -6,8 +6,14 @@ package testprogram.WiFi;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class RunThroughput {
+    public RunThroughput(){
+        //run iperf data
+        //parser test data
+        //get test spec from setting file
+        //adjust test result
+    }
     
 }

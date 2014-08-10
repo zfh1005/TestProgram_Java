@@ -3,6 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/AboutPanel.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/Socket/TcpSocketClient.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/WriteCode/WriteCode.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/Sfis/COMOperate.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/WiFi/SettingGolden.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/FailedValueDefine.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/TypeChange.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/CheckCode/CheckCode.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/File/ReadSettingValue.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/IOTest/LEDTest.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/WiFi/WiFiTest.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/ProgramJFrame.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/Sfis/SfisDutInfo.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/WiFi/SettingDut.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/Mydas/Mydas.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/WiFi/RunThroughput.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/Sfis/SfisMain.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/IOTest/RJ45Test.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/IOTest/ButtonTest.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/TestProgramJava.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/Log/RecordLog.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/IOTest/USBTest.java</file>
+            <file>file:/H:/Java/Java_workspace/NetbeansWorkSpace/TestProgram_Java/src/testprogram/File/SettingFileOperate.java</file>
+        </group>
     </open-files>
 </project-private>

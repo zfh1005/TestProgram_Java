@@ -6,9 +6,14 @@ package testprogram.WiFi;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class WiFiTest {
-    
-    
+    public WiFiTest(){
+        //setting dut
+        //setting golden
+        //ping Golden
+        //run throughput
+    }
+   
 }

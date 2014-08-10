@@ -6,8 +6,11 @@ package testprogram.WiFi;
 
 /**
  *
- * @author cq
+ * @author zfh1005
  */
 public class SettingDut {
+    public SettingDut(){
+        //send setting command to dut socket
+    }
     
 }
