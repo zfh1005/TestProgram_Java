@@ -6,8 +6,17 @@
 
 package testprogram;
 
-import javax.swing.JFrame;
+import testprogram.FileOperation.FileOperation;
+import testprogram.CheckCode.CheckCode;
+import testprogram.IOTest.*;
+import testprogram.Log.*;
+import testprogram.Mydas.*;
+import testprogram.Sfis.*;
+import testprogram.Socket.*;
+import testprogram.WiFi.*;
+import testprogram.WriteCode.*;
 
+import javax.swing.JFrame;
 /**
  *
  * @author zfh1005
@@ -22,13 +31,38 @@ public class TestProgramJava {
         pjf.setVisible(true);
     }
     
+    public void Init(){
+        tcch = new CheckCode();
+        tffi = new FileOperation();
+        tiio = new IOTest();
+        tllo = new Log();
+        tmmy = new Mydas();
+        tssf = new Sfis();
+        tsso = new Socket();
+        twwi = new WiFi();
+        twwr = new WriteCode();
+    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //show UI dialog
         TestProgramJava tpj = new TestProgramJava();
+        //init reference class
+        tpj.Init();
+        
+        
         
     }
     
+    private testprogram.CheckCode.CheckCode tcch;
+    private testprogram.FileOperation.FileOperation tffi;
+    private testprogram.IOTest.IOTest tiio;
+    private testprogram.Log.Log tllo;
+    private testprogram.Mydas.Mydas tmmy;
+    private testprogram.Sfis.Sfis tssf;
+    private testprogram.Socket.Socket tsso;
+    private testprogram.WiFi.WiFi twwi;
+    private testprogram.WriteCode.WriteCode twwr;
 }

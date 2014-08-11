@@ -2,21 +2,22 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package testprogram.File;
+package testprogram.FileOperation;
 
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher; 
 import java.util.regex.Pattern; 
+
 import testprogram.FailedValueDefine;
 
 /**
  *
  * @author zfh1005
  */
-public class SettingFileOperate {
-    FailedValueDefine FailedValueDefine = new FailedValueDefine();
+public class ReadValue {
+   
     
     public int FileStatusCheck(String PathName){
         File FileOperaterCheck = new File(PathName);
@@ -55,7 +56,7 @@ public class SettingFileOperate {
             is.close();            
         } 
         catch (Exception ex) {
-            Logger.getLogger(SettingFileOperate.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReadValue.class.getName()).log(Level.SEVERE, null, ex);
         }
         return  bKeyWordFindInFile ;  
     }
@@ -102,7 +103,7 @@ public class SettingFileOperate {
             }            
         }
         catch(Exception e){   
-            Logger.getLogger(SettingFileOperate.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(ReadValue.class.getName()).log(Level.SEVERE, null, e);
         }
         finally{
             if (reader != null) {
@@ -110,7 +111,7 @@ public class SettingFileOperate {
                     reader.close();
                 } 
                 catch (IOException e1) {
-                    Logger.getLogger(SettingFileOperate.class.getName()).log(Level.SEVERE, null, e1);
+                    Logger.getLogger(ReadValue.class.getName()).log(Level.SEVERE, null, e1);
                 }
             }
         }        
@@ -158,7 +159,7 @@ public class SettingFileOperate {
                     reader.close();
                 } 
                 catch (IOException e) {
-                    Logger.getLogger(SettingFileOperate.class.getName()).log(Level.SEVERE, null, e);
+                    Logger.getLogger(ReadValue.class.getName()).log(Level.SEVERE, null, e);
                 }
             }
         }
@@ -169,14 +170,14 @@ public class SettingFileOperate {
         //write new file
         try { 
             FileWriter fw = new FileWriter(FileName);                   
-            //OutputStream os = new FileOutputStream(new File(FileName));             
+            //OutputStream os = new FileOutputStream(new FileOperation(FileName));             
             //BufferedWriter bw = new BufferedWriter(new FileWriter(FileName));            
             fw.write(WriteBuffer);
             this.wait(1000);
             fw.close();            
         } 
         catch (Exception ex) {
-            Logger.getLogger(SettingFileOperate.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReadValue.class.getName()).log(Level.SEVERE, null, ex);
         }        
         return "PASS";       
     }
@@ -220,15 +221,12 @@ public class SettingFileOperate {
             } 
         }
         catch (Exception ex) {
-            Logger.getLogger(SettingFileOperate.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReadValue.class.getName()).log(Level.SEVERE, null, ex);
         }        
         return SetingValue;        
     }
     
-    public static void main(String[] args){
-        SettingFileOperate SettingFileOperate = new SettingFileOperate();
-        SettingFileOperate.WriteSettingValueToSettingFile("C:/TFTP_Status.ini", "SENDOK1", "999");        
-    }
+     private FailedValueDefine FailedValueDefine = new FailedValueDefine();
 }
 
        

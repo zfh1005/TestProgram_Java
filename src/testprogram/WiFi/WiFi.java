@@ -8,8 +8,8 @@ package testprogram.WiFi;
  *
  * @author zfh1005
  */
-public class WiFiTest {
-    public WiFiTest(){
+public class WiFi {
+    public WiFi(){
         //setting dut
         //setting golden
         //ping Golden

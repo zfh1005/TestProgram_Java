@@ -10,9 +10,9 @@ package testprogram.Sfis;
  *
  * @author zfh1005
  */
-public class SfisMain {
+public class Sfis {
     
-    public SfisMain(){
+    public Sfis(){
         COMOperate cp = new COMOperate();
         SfisDutInfo sdi = new SfisDutInfo();
         
