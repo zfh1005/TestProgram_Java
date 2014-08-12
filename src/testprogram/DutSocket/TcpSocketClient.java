@@ -9,7 +9,7 @@
  * public boolean ReadDutReturnInfo();
  * public boolean SocketConnectStatue();
  */
-package testprogram.Socket;
+package testprogram.DutSocket;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,6 +22,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import jdk.nashorn.internal.runtime.Logging;
 import testprogram.TypeChange;
 
 
@@ -31,23 +32,12 @@ import testprogram.TypeChange;
  * @author zfh1005
  */
 
-public class TcpSocketClient {
-    //是否输出debug信息
-    //1:enable  ; 0:not disable
-    public static int iShowDebugInfo ;  
-    //Dut socket return inforation
-    public String DutSocketReturnString = "";
-    //mark DUT socket connect status
-    public static boolean bSocketConnectFlag ;
-    //mark ping status
-    public static boolean bPingOkFlag ;
-    //mark get mac status flag
-    public static boolean bArpGetMacOkFlag;
-    //recode MAC
-    public static String MacAddress;
-    
-    private Socket DutSocketClient;
-    
+public class TcpSocketClient { 
+    //struct function
+    public TcpSocketClient(){
+        
+    }
+   
     //ping IP address
     public boolean PingIpAddress(String Ip, int PingCount, int PacketLength, int PingSuccessCount) {  
         //Ping sample
@@ -55,7 +45,7 @@ public class TcpSocketClient {
         bPingOkFlag = false;
         BufferedReader br = null;
         try {
-            String Cmd = new String();
+            String Cmd ;
             
             Cmd = ((("ping " + Ip) + " -n " + PingCount) + " -l " + PacketLength);
             Process p = Runtime.getRuntime().exec(Cmd);
@@ -94,7 +84,6 @@ public class TcpSocketClient {
         BufferedReader br = null;
         try {
             Process p = Runtime.getRuntime().exec("arp -a");
-            br = new BufferedReader(new InputStreamReader(p.getInputStream()));
             br = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String line = null;
             StringBuilder sb = new StringBuilder();
@@ -159,7 +148,7 @@ public class TcpSocketClient {
         bSocketConnectFlag = false;
         DutSocketClient = new Socket(addr, PortNo);
         
-        if(DutSocketReturnString.contains("busybox"))
+        if(DutSocketReturnString.contains("Busybox"))
         {           
             //System.out.println("connect server socket");            
             bSocketConnectFlag = true;
@@ -205,6 +194,7 @@ public class TcpSocketClient {
             return false;       
         }
         catch(InterruptedException e){
+            Logging.getLogger(e.toString());
             return false;
         }
     }
@@ -270,5 +260,21 @@ public class TcpSocketClient {
         catch(IOException e){
             return;
         }    
-    }    
+    } 
+    
+    //是否输出debug信息
+    //1:enable  ; 0:not disable
+    public static int iShowDebugInfo ;  
+    //Dut socket return inforation
+    public String DutSocketReturnString ;
+    //mark DUT socket connect status
+    public static boolean bSocketConnectFlag ;
+    //mark ping status
+    public static boolean bPingOkFlag ;
+    //mark get mac status flag
+    public static boolean bArpGetMacOkFlag;
+    //recode MAC
+    public static String MacAddress;
+    
+    private Socket DutSocketClient;
 }

@@ -9,7 +9,7 @@ package testprogram.FileOperation;
 
 /**
  *
- * @author PETER
+ * @author zfh1005
  */
 public class FileOperation {
     
@@ -24,9 +24,11 @@ public class FileOperation {
         DutVersionTime = null;
         DutBootcode = null;
         DutRegionCode = null;
+        DUTIpAddress = null;
         
         DutStringTableNumber = 0;
         DutStringTableCheckSum = null;
+        
         
 
         rsv = new ReadSettingValue();
@@ -43,6 +45,7 @@ public class FileOperation {
         DutVersionTime = rsv.parseSettingValue(SettingFileName, ProductName, "VersionTime");
         DutBootcode = rsv.parseSettingValue(SettingFileName, ProductName, "Bootcode");
         DutRegionCode = rsv.parseSettingValue(SettingFileName, ProductName, "RegionCode");
+        DUTIpAddress = rsv.parseSettingValue(SettingFileName, ProductName, "DutIp");
         DutStringTableNumber = Integer.parseInt(rsv.parseSettingValue(SettingFileName, ProductName, "StringTableNumber"));
         DutStringTableCheckSum = getCheckSum();
        
@@ -90,6 +93,10 @@ public class FileOperation {
     public String[] getDutStringTableCheckSum() {
         return DutStringTableCheckSum;
     }
+    
+     public String getDUTIpAddress() {
+        return DUTIpAddress;
+    }
 
    
     
@@ -107,10 +114,11 @@ public class FileOperation {
     
     private int DutStringTableNumber;
     private String[] DutStringTableCheckSum;
-   
     
+    private String DUTIpAddress;
+
     private ReadSettingValue rsv;
     
-    private final String SettingFileName = "c:\\TestInfo";
+    private final String SettingFileName = "c:\\TestInfomation.ini";
     
 }

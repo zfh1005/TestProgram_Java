@@ -6,10 +6,25 @@
 
 package testprogram.IOTest;
 
+
 /**
  *
- * @author PETER
+ * @author zfh1005
  */
 public class IOTest {
+    //struct function
+    public IOTest(){
+        bt = new ButtonTest();
+        lt = new LEDTest();
+        rt = new RJ45Test();
+        ut = new USBTest();
+    }
+    
+    
+    
+    private ButtonTest bt;
+    private LEDTest lt;
+    private RJ45Test rt;
+    private USBTest ut;
     
 }

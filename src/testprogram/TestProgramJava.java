@@ -6,13 +6,13 @@
 
 package testprogram;
 
+import testprogram.DutSocket.DutSocket;
 import testprogram.FileOperation.FileOperation;
 import testprogram.CheckCode.CheckCode;
 import testprogram.IOTest.*;
 import testprogram.Log.*;
 import testprogram.Mydas.*;
 import testprogram.Sfis.*;
-import testprogram.Socket.*;
 import testprogram.WiFi.*;
 import testprogram.WriteCode.*;
 
@@ -32,13 +32,13 @@ public class TestProgramJava {
     }
     
     public void Init(){
-        tcch = new CheckCode();
         tffi = new FileOperation();
+        tssf = new Sfis();
+        tsso = new DutSocket();
+        tcch = new CheckCode();        
         tiio = new IOTest();
         tllo = new Log();
         tmmy = new Mydas();
-        tssf = new Sfis();
-        tsso = new Socket();
         twwi = new WiFi();
         twwr = new WriteCode();
     }
@@ -62,7 +62,7 @@ public class TestProgramJava {
     private testprogram.Log.Log tllo;
     private testprogram.Mydas.Mydas tmmy;
     private testprogram.Sfis.Sfis tssf;
-    private testprogram.Socket.Socket tsso;
+    private testprogram.DutSocket.DutSocket tsso;
     private testprogram.WiFi.WiFi twwi;
     private testprogram.WriteCode.WriteCode twwr;
 }
