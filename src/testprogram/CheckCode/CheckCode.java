@@ -10,6 +10,9 @@ package testprogram.CheckCode;
  * 
  */
 public class CheckCode {
+    public CheckCode(){
+        ccf = new CheckCodeFormat();
+    }
     
     /*
     check dut FW version
@@ -18,9 +21,11 @@ public class CheckCode {
     */
     public boolean CheckVersion(String versionSpec){
         //send check command to DUT socket
-        
+        dutSocket.SendDutCommand(CommandCheckVersion);
         //compare dut respone buffer with parameter
-        
+        if(dutSocket.getRuturnBurrfer().contains(versionSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -30,6 +35,12 @@ public class CheckCode {
     @return true:the version time from dut the same with setting file
     */
     public boolean CheckVersionTime(String versionTimeSpec){
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckVersionTime);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(versionTimeSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -39,6 +50,12 @@ public class CheckCode {
     @return true:the Bootcode version from dut the same with setting file
     */
     public boolean CheckBootcode(String bootcodeSpec){
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckBootcodeVersion);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(bootcodeSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -48,6 +65,12 @@ public class CheckCode {
     @return true:the MAC information from dut the same with SFIS system
     */
     public boolean CheckMac(String macSpec){
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckMac);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(macSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -57,6 +80,12 @@ public class CheckCode {
     @return true:the PinCode information from dut the same with SFIS system
     */
     public boolean CheckPin(String pinSpec){
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckPincode);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(pinSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -66,6 +95,12 @@ public class CheckCode {
     @return true:the SSN information from dut the same with SFIS system
     */
     public boolean CheckSsn(String ssnSpec){
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckSsn);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(ssnSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -75,6 +110,16 @@ public class CheckCode {
     @return true:the SSID information from dut the same with SFIS system
     */
     public boolean CheckSSID(String ssidSpec){
+        //check ssid foramt
+        if(ccf.checkSsidFormat(ssidSpec) == false){
+            return false;
+        }
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckSsid);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(ssidSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -84,6 +129,16 @@ public class CheckCode {
     @return true:the passphraseSpec information from dut the same with SFIS system
     */
     public boolean CheckPassphrase(String passphraseSpec){
+        //check passphrase format
+        if(ccf.checkPasspharseFormat(passphraseSpec) == false){
+            return false;
+        }
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckPaseroharse);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(passphraseSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -93,6 +148,22 @@ public class CheckCode {
     @return true:the RegionCode information from dut the same with SFIS system
     */
     public boolean CheckRegionCode(String regioncodeSpec){
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CommandCheckRegionCode);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(regioncodeSpec)){
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean CheckCodeCommon(String CheckCommand, String CheckCommandSpec){
+        //send check command to DUT socket
+        dutSocket.SendDutCommand(CheckCommand);
+        //compare dut respone buffer with parameter
+        if(dutSocket.getRuturnBurrfer().contains(CheckCommandSpec)){
+            return true;
+        }
         return false;
     }
     
@@ -104,5 +175,18 @@ public class CheckCode {
     public boolean CheckStringTableCheckSum(String[] checksumSpec){
         return false;
     }
+    
+    private testprogram.DutSocket.DutSocket dutSocket;
+    private CheckCodeFormat ccf;
+    
+    private final String CommandCheckVersion = "version";
+    private final String CommandCheckVersionTime = "version";
+    private final String CommandCheckBootcodeVersion = "version";
+    private final String CommandCheckMac = "burnethermac";
+    private final String CommandCheckPincode = "burnpin";
+    private final String CommandCheckSsn = "burnsn";
+    private final String CommandCheckSsid = "burnssid";
+    private final String CommandCheckPaseroharse = "burnpass";
+    private final String CommandCheckRegionCode = "burnsku";
     
 }

@@ -6,7 +6,7 @@
 
 package testprogram;
 
-import testprogram.DutSocket.DutSocket;
+import testprogram.DutSocket.*;
 import testprogram.FileOperation.FileOperation;
 import testprogram.CheckCode.CheckCode;
 import testprogram.IOTest.*;
