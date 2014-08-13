@@ -4,14 +4,17 @@
  */
 package testprogram.CheckCode;
 
+import testprogram.DutSocket.DutSocket;
+
 /**
  *
  * @author zfh1005
  * 
  */
 public class CheckCode {
-    public CheckCode(){
+    public CheckCode(DutSocket Socket){
         ccf = new CheckCodeFormat();
+        dutSocket = Socket;
     }
     
     /*
@@ -176,7 +179,7 @@ public class CheckCode {
         return false;
     }
     
-    private testprogram.DutSocket.DutSocket dutSocket;
+    private DutSocket dutSocket;
     private CheckCodeFormat ccf;
     
     private final String CommandCheckVersion = "version";

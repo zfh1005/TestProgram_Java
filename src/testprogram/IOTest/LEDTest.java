@@ -4,12 +4,14 @@
  */
 package testprogram.IOTest;
 
+import testprogram.DutSocket.DutSocket;
+
 /**
  *
  * @author zfh1005
  */
 public class LEDTest {
-    public LEDTest(){
+    public LEDTest(DutSocket Socket){
         //send command to dut socket
         
         //read dut buffer thread

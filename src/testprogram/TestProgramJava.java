@@ -35,8 +35,8 @@ public class TestProgramJava {
         tffi = new FileOperation();
         tssf = new Sfis();
         tsso = new DutSocket();
-        tcch = new CheckCode();        
-        tiio = new IOTest();
+        //tcch = new CheckCode();        
+        //tiio = new IOTest();
         tllo = new Log();
         tmmy = new Mydas();
         twwi = new WiFi();

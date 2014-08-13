@@ -6,6 +6,8 @@
 
 package testprogram.IOTest;
 
+import testprogram.DutSocket.DutSocket;
+
 
 /**
  *
@@ -13,11 +15,11 @@ package testprogram.IOTest;
  */
 public class IOTest {
     //struct function
-    public IOTest(){
-        bt = new ButtonTest();
-        lt = new LEDTest();
-        rt = new RJ45Test();
-        ut = new USBTest();
+    public IOTest(DutSocket dutSocket){
+        bt = new ButtonTest(dutSocket);
+        lt = new LEDTest(dutSocket);
+        rt = new RJ45Test(dutSocket);
+        ut = new USBTest(dutSocket);
     }
     
     
@@ -27,4 +29,5 @@ public class IOTest {
     private RJ45Test rt;
     private USBTest ut;
     
+ 
 }
