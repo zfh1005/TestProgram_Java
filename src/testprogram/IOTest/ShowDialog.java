@@ -11,5 +11,11 @@ package testprogram.IOTest;
  * @author zfh1005
  */
 public class ShowDialog {
+    public ShowDialog(Object ob){
+        result = false;
+        
+    }
+    
+    private boolean result ;
     
 }

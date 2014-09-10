@@ -41,9 +41,7 @@ public class CheckCodeFormat {
                     //if the end three charater is not number,the compare will always failed.
                     break;
                 }
-            } else {
-                continue;
-            }
+            } 
         }
         return false;
     }
